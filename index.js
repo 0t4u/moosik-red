@@ -42,7 +42,7 @@ process.on('SIGINT', () => {
 
 client.on('ready', () => {
   //setting activities
-  let activities = [ `Prefix: ${client.config.prefix}`, `Version: ${require('./package.json').version} beta`, `Discord.js: ${require('./package.json').dependencies['discord.js']}` ], i = 0;
+  let activities = [ `Prefix: ${client.config.prefix}`, `Version: ${require('./package.json').version} LTS`, `Discord.js: ${require('./package.json').dependencies['discord.js']}` ], i = 0;
   setInterval(() => client.user.setPresence({ status: 'online', activity: {name: `Music | ${activities[i++ % activities.length]}`, type: `PLAYING`}}), 15000);
   //lavajs + lavajs events
   client.music = new LavaClient(client, nodes);
