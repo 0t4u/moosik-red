@@ -1,0 +1,8 @@
+[   
+    {
+        "host": "localhost",
+        "port": "3003",
+        "password": "youshallnotpass",
+        "retries": 5
+    }
+]
