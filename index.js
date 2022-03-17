@@ -463,12 +463,12 @@ api.get('/stats', (req, res) => {
 })
 
 api.get('/node/:node', (req, res) => {
-  if (req.params.node === 'contabo') {
+  if (req.params.node) {
     if (client.music) {
-       if (client.music.nodeCollection.get('62.171.174.121')) {
+       if (client.music.nodeCollection.get(req.params.node)) {
         return res.json({
           "code": 200,
-          "stats": client.music.nodeCollection.get('62.171.174.121').systemStats
+          "stats": client.music.nodeCollection.get(req.params.node).systemStats
         })
       } else {
         return res.json({
